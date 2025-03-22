@@ -1,7 +1,7 @@
 using FactoryMethod.Models;
-using FactoryMethod.Factory.Interfaces;
+using FactoryMethod.Factories.Interfaces;
 
-namespace FactoryMethod.Factory
+namespace FactoryMethod.Factories.QuestionFactory
 {
 
     public sealed class MotherQuestionFactory : IFactory<Question>

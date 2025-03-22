@@ -1,5 +1,5 @@
-﻿using FactoryMethod.Factory;
-using FactoryMethod.Factory.Interfaces;
+﻿using FactoryMethod.Factories.QuestionFactory;
+using FactoryMethod.Factories.Interfaces;
 using FactoryMethod.Models;
 using System.Text.Json;
 
@@ -16,6 +16,10 @@ namespace FactoryMethod
             questionFactory = new FatherQuestionFactory();
             question = questionFactory.Create();
             Console.WriteLine($"Father Question: {JsonSerializer.Serialize(question).Replace("\\u0027", "'")}");
+
+            question = QuestionFactory.Create("MOTHER");
+            Console.WriteLine("Another way to create question...");
+            Console.WriteLine($"Mother Question: {JsonSerializer.Serialize(question).Replace("\\u0027", "'")}");
         }
     }
 }

@@ -1,5 +1,5 @@
 
-namespace FactoryMethod.Factory.Interfaces
+namespace FactoryMethod.Factories.Interfaces
 {
     public interface IFactory<T>
     {
