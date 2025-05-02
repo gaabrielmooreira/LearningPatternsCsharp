@@ -3,9 +3,9 @@ namespace Strategy;
 
 public class TaxCalculator
 {
-    public ITaxStrategy _taxStrategy;
+    public ITaxStrategy _taxStrategy = new ConcreteTaxStrategy();
 
-    public TaxCalculator(ITaxStrategy taxStrategy)
+    public void SetStrategy(ITaxStrategy taxStrategy)
     {
         _taxStrategy = taxStrategy;
     }
